@@ -8,3 +8,4 @@ Instructions can be found here: https://www.notion.so/avenuedesign/Avenue-Dev-Te
 2. Run `npm install`
 3. Rename `.env.sample` to `.env.development`
 4. Run `npm start`
+5. When dev server builds visit http://localhost:8000/
