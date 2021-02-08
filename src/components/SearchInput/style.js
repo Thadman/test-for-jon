@@ -2,20 +2,25 @@ import styled from "styled-components"
 import { device } from "../../utils/breakpoints"
 
 export const Input = styled.input`
-
-  background: red;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 5px;
   border: none;
+  width: 100%;
 
   @media ${device.tablet} {
     background: #fff;
   }
-  
-`;
+
+  @media screen and (max-width: 600px) {
+    // background: red;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+`
 
 export const Header = styled.header`
-  padding: 30px;
-  background: #3E5797;
-`;
-
+  padding: 30px 0px 30px 0px;
+  display: flex;
+  justify-content: center;
+  background: #3e5797;
+`

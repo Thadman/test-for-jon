@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Teaser } from "../../components/Teaser"
 import { SearchInput } from "../../components/SearchInput"
+import { Card } from "../../components/Card/style"
+import { Container } from "../../components/Container/style"
 
 const IndexPage = ({ data }) => {
   const {
@@ -17,10 +19,15 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <SearchInput />
-
-      {stories.map((story, index) => {
-        return <Teaser data={story} key={`story${index}`} />
-      })}
+      <Container style={{ marginTop: "10px" }}>
+        {stories.map((story, index) => {
+          return (
+            <Card>
+              <Teaser data={story} key={`story${index}`} />
+            </Card>
+          )
+        })}
+      </Container>
     </main>
   )
 }
