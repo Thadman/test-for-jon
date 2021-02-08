@@ -1,4 +1,5 @@
 import React from "react"
+import { useState } from "react"
 import { graphql } from "gatsby"
 import { Teaser } from "../../components/Teaser"
 import { SearchInput } from "../../components/SearchInput"
@@ -14,11 +15,19 @@ const IndexPage = ({ data }) => {
     },
   } = data
 
-  console.log(stories)
+  // console.log(stories)
+
+  const { search } = window.location
+  const query = new URLSearchParams(search).get("s")
+  const [searchQuery, setSearchQuery] = useState(query || "")
 
   return (
     <main>
-      <SearchInput />
+      <SearchInput
+        data={data}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <Container style={{ marginTop: "10px" }}>
         {stories.map((story, index) => {
           return (

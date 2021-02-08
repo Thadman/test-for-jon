@@ -70,15 +70,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "GTM-KCJTG8J"
+        id: "GTM-KCJTG8J",
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat\:300,600`,
-        ],
+        fonts: [`Montserrat\:300,600`],
       },
     },
     {
@@ -87,10 +85,22 @@ module.exports = {
         displayName: true,
       },
     },
+    //  {
+    //     resolve: 'gatsby-plugin-local-search',
+    //     options: {
+    //         name: 'pages',
+    //         engine: 'flexsearch',
+    //         query: /** TODO **/,
+    //         ref: /** TODO **/,
+    //         index: /** TODO **/,
+    //         store: /** TODO **/,
+    //         normalizer: /** TODO **/,
+    //     }
+    // },
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-   
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -5,15 +5,13 @@ import parse from "html-react-parser"
 const Teaser = ({ data }) => {
   return (
     <Article>
-      <div>
-        <Image
-          fluid={{
-            ...data.featuredImage,
-            sizes: "(max-width: 1024px) 100vw, 360px",
-          }}
-          style={{ width: "100%" }}
-        />
-      </div>
+      <Image
+        fluid={{
+          ...data.featuredImage,
+          sizes: "(max-width: 1024px) 100vw, 360px",
+        }}
+      />
+
       <div style={{ display: "flex", marginBottom: "10px" }}>
         {data.categories.nodes.map((item, index) => (
           <Category key={index}>{item.name}</Category>

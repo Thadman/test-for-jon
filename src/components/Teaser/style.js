@@ -18,12 +18,18 @@ export const Title = styled.h3`
 export const Image = styled(AvenueImg)`
   width: 78px;
   margin-bottom: 10px;
+  float: right;
+  width: 30%;
 
-  @media ${device.tablet} {
-    width: 200px;
-  }
+  
+  // @media ${device.tablet} {
+  //   width: 200px;
+  //   float: none;
+  // }
 
   @media ${device.mobile} {
+    width: 100%;
+    float: none;
   }
 `
 
