@@ -31,6 +31,7 @@ export const Image = styled(AvenueImg)`
     width: 100%;
     float: none;
   }
+
 `
 
 export const Link = styled(AvenueLink)`

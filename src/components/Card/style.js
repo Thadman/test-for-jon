@@ -13,4 +13,13 @@ export const Card = styled.div`
     border-bottom: 1px solid gray;
     margin: 10px;
   }
+
+  @media screen and (max-width: 768px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+    margin: 5px;
+  }
 `
