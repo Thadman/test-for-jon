@@ -7,6 +7,7 @@ import { Card } from "../../components/Card/style"
 import { Container } from "../../components/Container/style"
 
 const IndexPage = ({ data }) => {
+  const [searchQuery, setSearchQuery] = useState("")
   const {
     wpgraphql: {
       page: {
@@ -16,7 +17,6 @@ const IndexPage = ({ data }) => {
   } = data
 
   console.log(stories)
-  const [searchQuery, setSearchQuery] = useState("")
   return (
     <main>
       <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -25,8 +25,13 @@ const IndexPage = ({ data }) => {
           .filter(
             s =>
               s.title.toLowerCase().includes(searchQuery) ||
-              s.excerpt.toLowerCase().includes(searchQuery)
+              s.excerpt.toLowerCase().includes(searchQuery) ||
+              s.categories.nodes
+                .map(c => c.name.toLowerCase())
+                .join()
+                .includes(searchQuery)
           )
+
           .map((story, index) => {
             return (
               <Card key={index}>
