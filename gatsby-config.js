@@ -85,18 +85,6 @@ module.exports = {
         displayName: true,
       },
     },
-    //  {
-    //     resolve: 'gatsby-plugin-local-search',
-    //     options: {
-    //         name: 'pages',
-    //         engine: 'flexsearch',
-    //         query: /** TODO **/,
-    //         ref: /** TODO **/,
-    //         index: /** TODO **/,
-    //         store: /** TODO **/,
-    //         normalizer: /** TODO **/,
-    //     }
-    // },
 
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

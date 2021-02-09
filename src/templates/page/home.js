@@ -15,27 +15,25 @@ const IndexPage = ({ data }) => {
     },
   } = data
 
-  // console.log(stories)
-
-  const { search } = window.location
-  const query = new URLSearchParams(search).get("s")
-  const [searchQuery, setSearchQuery] = useState(query || "")
-
+  console.log(stories)
+  const [searchQuery, setSearchQuery] = useState("")
   return (
     <main>
-      <SearchInput
-        data={data}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
+      <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <Container style={{ marginTop: "10px" }}>
-        {stories.map((story, index) => {
-          return (
-            <Card>
-              <Teaser data={story} key={`story${index}`} />
-            </Card>
+        {stories
+          .filter(
+            s =>
+              s.title.toLowerCase().includes(searchQuery) ||
+              s.excerpt.toLowerCase().includes(searchQuery)
           )
-        })}
+          .map((story, index) => {
+            return (
+              <Card key={index}>
+                <Teaser data={story} key={`story${index}`} />
+              </Card>
+            )
+          })}
       </Container>
     </main>
   )

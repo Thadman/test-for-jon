@@ -2,18 +2,19 @@ import React from "react"
 import { Input, Header } from "./style"
 import { Container } from "../Container/style"
 
-const SearchInput = ({ data, searchQuery, setSearchQuery }) => {
-  console.log(data)
+const SearchInput = ({ searchQuery, setSearchQuery }) => {
+  // i have the data here that i need to filter
+
+  // console.log(data)
+
   return (
     <Header>
       <Container>
         <Input
           placeholder="Enter keywords..."
-          value={searchQuery}
-          onChange={e => setSearchQuery(e.target.value)}
           type="text"
-          id="header-search"
-          name="s"
+          onChange={event => setSearchQuery(event.target.value)}
+          value={searchQuery}
         />
       </Container>
     </Header>
