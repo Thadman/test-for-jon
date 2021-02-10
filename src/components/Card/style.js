@@ -7,10 +7,11 @@ export const Card = styled.div`
   justify-content: space-between;
   margin-bottom: 10px;
   margin-top: 10px;
-  border-bottom: #dfdfdf;
+
 
 
   @media screen and (max-width: 414px ) {
+    border-bottom: #e5e5e5;
   }
 
   @media screen and (max-width: 568x) {
