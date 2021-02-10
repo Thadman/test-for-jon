@@ -24,7 +24,7 @@ const Teaser = ({ data }) => {
         <Title style={{ marginBottom: "15px" }}>{parse(data.title)}</Title>
       </div>
       <div>
-        <Excerpt style={{ fontSize: "15px", marginBottom: "10px" }}>
+        <Excerpt style={{ fontSize: "16px", marginBottom: "10px" }}>
           {data.excerpt}
         </Excerpt>
       </div>

@@ -5,12 +5,16 @@ export const Card = styled.div`
   width: 330px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: #dfdfdf;
+
+
+  @media screen and (max-width: 414px ) {
+  }
 
   @media screen and (max-width: 568x) {
     width: 100%;
-    border-bottom: 1px solid gray;
     margin: 10px;
   }
 
