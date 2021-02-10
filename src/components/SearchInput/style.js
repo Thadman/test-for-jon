@@ -22,12 +22,12 @@ export const Input = styled.input`
     margin-right: 10px;
   }
 
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  @media screen and (max-width: 1024px) {
     margin-left: 10px;
     margin-right: 10px;
   }
 
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1366px) {
     margin-left: 10px;
     margin-right: 10px;
   }

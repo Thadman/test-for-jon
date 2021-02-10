@@ -8,7 +8,7 @@ export const Card = styled.div`
   margin-bottom: 20px;
   margin-top: 30px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 568x) {
     width: 100%;
     border-bottom: 1px solid gray;
     margin: 10px;
@@ -20,8 +20,15 @@ export const Card = styled.div`
     width: 100%;
   }
 
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    width: 50%;
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+    // background: red;
+    width: 48%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 50%
     padding: 10px;
   }
 
