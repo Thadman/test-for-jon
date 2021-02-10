@@ -11,7 +11,7 @@ export const Card = styled.div`
 
 
   @media screen and (max-width: 414px ) {
-    border-bottom: 1px solid gray;
+    border-bottom: 0.5px solid gray;
   }
 
   @media screen and (max-width: 568x) {
