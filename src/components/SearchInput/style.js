@@ -26,6 +26,11 @@ export const Input = styled.input`
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 `
 
 export const Header = styled.header`

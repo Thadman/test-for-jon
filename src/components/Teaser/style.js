@@ -40,11 +40,11 @@ export const Link = styled(AvenueLink)`
 
 export const Category = styled.a`
   font-size: 12px;
-  width: 50px;
+  width: 60px;
   background: #6cb73e;
-  margin-right: 5px;
   color: #fff;
   text-align: center;
+  margin-right: 12px;
 `
 
 export const Excerpt = styled.p`
