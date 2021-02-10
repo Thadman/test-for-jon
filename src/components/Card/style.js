@@ -32,7 +32,7 @@ export const Card = styled.div`
     padding: 10px;
   }
 
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  @media screen and (min-width: 1024px) and (max-width: 1366px) {
     margin: 5px;
     width: 330px;
   }
