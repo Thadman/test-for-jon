@@ -28,7 +28,13 @@ const Teaser = ({ data }) => {
           {data.excerpt}
         </Excerpt>
       </div>
-      <div style={{ marginBottom: "-25px" }}>
+      <div
+        style={{
+          marginBottom: "-50px",
+          height: "50px",
+          borderBottom: "1px solid gray",
+        }}
+      >
         <Link to={data.uri} style={{ color: "black", fontWeight: "bold" }}>
           Read More
         </Link>
