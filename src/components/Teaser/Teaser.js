@@ -6,6 +6,7 @@ const Teaser = ({ data }) => {
   return (
     <Article>
       <Image
+        style={{ marginBottom: "18px" }}
         fluid={{
           ...data.featuredImage,
           sizes: "(max-width: 1024px) 100vw, 360px",
@@ -14,17 +15,23 @@ const Teaser = ({ data }) => {
 
       <div style={{ display: "flex", marginBottom: "10px" }}>
         {data.categories.nodes.map((item, index) => (
-          <Category key={index}>{item.name}</Category>
+          <Category key={index} style={{ fontWeight: "600" }}>
+            {item.name}
+          </Category>
         ))}
       </div>
       <div>
-        <Title style={{ marginBottom: "10px" }}>{parse(data.title)}</Title>
+        <Title style={{ marginBottom: "15px" }}>{parse(data.title)}</Title>
       </div>
       <div>
-        <Excerpt>{data.excerpt}</Excerpt>
+        <Excerpt style={{ fontSize: "15px", marginBottom: "10px" }}>
+          {data.excerpt}
+        </Excerpt>
       </div>
-      <div>
-        <Link to={data.uri}>Read More</Link>
+      <div style={{ marginBottom: "-25px" }}>
+        <Link to={data.uri} style={{ color: "black", fontWeight: "bold" }}>
+          Read More
+        </Link>
       </div>
     </Article>
   )

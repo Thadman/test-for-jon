@@ -9,6 +9,15 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 
+  &:after {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    content: "";
+    width: 330px;
+    margin-right: 10px;
+  }
+
   @media ${device.tablet} {
     // background: #fff;
   }

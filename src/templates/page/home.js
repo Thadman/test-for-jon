@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
     },
   } = data
 
-  console.log(stories)
+  // console.log(stories)
   return (
     <main>
       <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -31,7 +31,6 @@ const IndexPage = ({ data }) => {
                 .join()
                 .includes(searchQuery)
           )
-
           .map((story, index) => {
             return (
               <Card key={index}>
