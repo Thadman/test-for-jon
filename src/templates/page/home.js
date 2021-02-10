@@ -24,12 +24,12 @@ const IndexPage = ({ data }) => {
         {stories
           .filter(
             s =>
-              s.title.toLowerCase().includes(searchQuery) ||
-              s.excerpt.toLowerCase().includes(searchQuery) ||
+              s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              s.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
               s.categories.nodes
                 .map(c => c.name.toLowerCase())
                 .join()
-                .includes(searchQuery)
+                .includes(searchQuery.toLowerCase())
           )
           .map((story, index) => {
             return (

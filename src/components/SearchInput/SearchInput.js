@@ -9,7 +9,7 @@ const SearchInput = ({ searchQuery, setSearchQuery }) => {
         <Input
           placeholder="Enter keywords..."
           type="text"
-          onChange={event => setSearchQuery(event.target.value.toLowerCase())}
+          onChange={event => setSearchQuery(event.target.value)}
           value={searchQuery}
         />
       </Container>
